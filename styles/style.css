@@ -731,60 +731,74 @@ nav .copyright {
 #projects .container .project {
   width: 250px;
   height: 250px;
-  border-radius: 5px;
-  position: relative;
-}
-
-#projects .container .project .fade-in {
-  position: absolute;
-  width: 250px;
-  height: 250px;
-  background-color: blue;
-  color: whitesmoke;
+  border: 1px black solid;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, left top, right top, from(lightblue), to(#a4cfdd));
+  background: linear-gradient(to right, lightblue, #a4cfdd);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   text-align: center;
-  border-radius: 5px;
-  top: 0;
-  left: 0;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  position: relative;
 }
 
-#projects .container .project .fade-in h1 {
-  font-size: 1.8rem;
-}
-
-#projects .container .project .fade-in a button {
+#projects .container .project button {
+  font-family: "Quicksand", sans-serif;
   font-size: 18px;
-  padding: 5px 10px;
-  background-color: whitesmoke;
-  color: black;
+  padding: 5px;
+  border-radius: 3px;
   border: 1px black solid;
   outline: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-#projects .container .project .fade-in a button:hover {
-  background-color: lightgrey;
+#projects .container .project .fade-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 250px;
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#projects .container .project h1 {
+  font-size: 1.6rem;
+  z-index: 2;
+}
+
+#projects .container .project a {
+  z-index: 2;
 }
 
 #projects .container .project:hover .fade-in {
   opacity: 1;
+  z-index: 1;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
+}
+
+#projects .container .project:hover #email-gen {
+  background-image: url(../img/email-signature-img.png);
+}
+
+#projects .container .project:hover #weather-app {
+  background-image: url(../img/weather-app-img.png);
 }
 
 @media screen and (max-width: 680px) {

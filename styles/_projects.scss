@@ -37,56 +37,65 @@
     .project {
       width: 250px;
       height: 250px;
-      border-radius: 5px;
+      border: 1px black solid;
+      border-radius: 3px;
+      background: linear-gradient(to right, lightblue, rgb(164, 207, 221));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      text-align: center;
       position: relative;
+      button {
+        font-family: "Quicksand", sans-serif;
+        font-size: 18px;
+        padding: 5px;
+        border-radius: 3px;
+        border: 1px black solid;
+        outline: none;
+        cursor: pointer;
+      }
       .fade-in {
         position: absolute;
-        width: 250px;
-        height: 250px;
-        background-color: blue;
-        color: whitesmoke;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        text-align: center;
-        border-radius: 5px;
         top: 0;
         left: 0;
+        width: 250px;
+        height: 250px;
+        opacity: 0;
+        z-index: -1;
         transition: all 0.5s ease;
-        h1{
-          font-size: 1.8rem;
-        }
-        a{
-          button{
-            font-size: 18px;
-            padding: 5px 10px;
-            background-color: whitesmoke;
-            color: black;
-            border: 1px black solid;
-            outline: none;
-            border-radius: 5px;
-            cursor: pointer;
-            &:hover{
-              background-color: lightgrey;
-            }
-          }
-        }
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      h1 {
+        font-size: 1.6rem;
+        z-index: 2;
+      }
+      a {
+        z-index: 2;
       }
       &:hover {
         .fade-in {
           opacity: 1;
+          z-index: 1;
           transition: opacity 0.5s;
+        }
+        #email-gen {
+          background-image: url(../img/email-signature-img.png);
+        }
+        #weather-app {
+          background-image: url(../img/weather-app-img.png);
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 680px){
-  #projects{
+@media screen and (max-width: 680px) {
+  #projects {
     height: fit-content;
-    .container{
+    .container {
       padding: 20px 0;
       display: flex;
       flex-direction: column;
@@ -96,16 +105,16 @@
   }
 }
 
-@media screen and (max-width: 520px){
-  #projects{
-    .container{
-      .project{
+@media screen and (max-width: 520px) {
+  #projects {
+    .container {
+      .project {
         width: 200px;
         height: 200px;
-        .fade-in{
+        .fade-in {
           width: 200px;
           height: 200px;
-          h1{
+          h1 {
             font-size: 1.5rem;
           }
         }
@@ -114,20 +123,20 @@
   }
 }
 
-@media screen and (max-width: 350px){
-  #projects{
-    .container{
-      .project{
+@media screen and (max-width: 350px) {
+  #projects {
+    .container {
+      .project {
         width: 150px;
         height: 150px;
-        .fade-in{
+        .fade-in {
           width: 150px;
           height: 150px;
-          h1{
+          h1 {
             font-size: 18px;
           }
-          a{
-            button{
+          a {
+            button {
               font-size: 12px;
             }
           }
