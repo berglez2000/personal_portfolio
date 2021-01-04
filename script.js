@@ -26,7 +26,7 @@ const main = () => {
     let tl = gsap.timeline();
 
     // home animation
-    if (window.innerWidth > 755){
+    if (window.innerWidth > 750){
       gsap.from(homeText, {duration: 1.5, stagger: 0.15, y: 50, opacity: 0, ease: "power4.out"});
       gsap.from(homeImg, {duration: 1.5, y: 50, opacity: 0});
     } else{
@@ -37,7 +37,7 @@ const main = () => {
 
     // Nav animation
     gsap.from(navLinks, {duration: 1, stagger: 0.15, opacity: 0, x: -30});
-    gsap.from(socialMedia, {duration: 1.5, stagger: 0.15, opacity: 0});
+    gsap.from(socialMedia, {duration: 1, stagger: 0.15, opacity: 0});
 
     // About animation
     gsap.from(aboutText, {scrollTrigger: aboutText, duration: 1, x: -50, y: 50, opacity: 0, stagger: 0.25});
@@ -45,18 +45,18 @@ const main = () => {
 
     // Skill animation
     gsap.from(skillTitle, {scrollTrigger: "#skills", duration: 1, x: -30, opacity: 0});
-    gsap.from(skills, {scrollTrigger: ".skill-section", duration: 1.5, opacity: 0, x: -50});
-    gsap.from(skillPercentege, {scrollTrigger: ".skill-section", duration: 1, width: 0, delay: 1.5});
-    gsap.from(addSkills, {scrollTrigger: ".add-skills", duration: 1, x: -70, opacity: 0, stagger: 0.15, delay: 2});
+    gsap.from(skills, {scrollTrigger: ".skill-section", duration: 1, opacity: 0, x: -50});
+    gsap.from(skillPercentege, {scrollTrigger: ".skill-section", duration: 1, width: 0, delay: 0.5});
+    gsap.from(addSkills, {scrollTrigger: ".add-skills", duration: 1, x: -70, opacity: 0, stagger: 0.15, delay: 1});
 
     // Projects animation
     gsap.from(projectTitle, {scrollTrigger: "#projects .titles", duration: 1, opacity: 0, x: -50});
-    gsap.from(projects, {scrollTrigger: "#projects .container", duration: 1.5, opacity: 0, stagger: 0.25, delay: 1});
+    gsap.from(projects, {scrollTrigger: "#projects .container", duration: 1, opacity: 0, stagger: 0.25, delay: 0.5});
 
     // Contact animation
     gsap.from(contactTitle, {scrollTrigger: "#contact .titles", duration: 1, opacity: 0, x: -50});
-    gsap.from(contacts, {scrollTrigger: "#contact .container", duration: 1.5, opacity: 0, x: -50, stagger: 0.25, delay: 1});
-    gsap.from(contactform, {scrollTrigger: "#contact form", duration: 1.5, opacity: 0, x: 50, stagger: 0.25, delay: 2});
+    gsap.from(contacts, {scrollTrigger: "#contact .container", duration: 1, opacity: 0, x: -50, stagger: 0.25, delay: 0.5});
+    gsap.from(contactform, {scrollTrigger: "#contact form", duration: 1, opacity: 0, x: 50, stagger: 0.25, delay: 0.5});
   }
 
 

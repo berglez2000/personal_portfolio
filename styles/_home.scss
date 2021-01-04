@@ -45,21 +45,22 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    max-height: 90%;
+    max-width: 55%;
   }
 }
 
-
-@media screen and (max-width: 500px){
-  #home{
-    img{
+@media screen and (max-width: 500px) {
+  #home {
+    img {
       height: 500px;
     }
   }
 }
 
-@media screen and (max-width: 350px){
-  #home{
-    img{
+@media screen and (max-width: 350px) {
+  #home {
+    img {
       height: 400px;
     }
   }
