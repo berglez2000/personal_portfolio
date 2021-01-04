@@ -329,12 +329,12 @@ nav .copyright {
   bottom: 0;
   right: 0;
   max-height: 90%;
-  max-width: 55%;
 }
 
 @media screen and (max-width: 500px) {
   #home img {
     height: 500px;
+    width: auto;
   }
 }
 

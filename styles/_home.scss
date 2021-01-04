@@ -46,7 +46,6 @@
     bottom: 0;
     right: 0;
     max-height: 90%;
-    max-width: 55%;
   }
 }
 
@@ -54,6 +53,7 @@
   #home {
     img {
       height: 500px;
+      width: auto;
     }
   }
 }
