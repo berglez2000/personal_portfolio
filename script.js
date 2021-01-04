@@ -17,6 +17,12 @@ const projects = document.querySelectorAll("#projects .project");
 const contactTitle = document.querySelector("#contact .titles");
 const contacts = document.querySelectorAll("#contact .container div");
 const contactform = document.querySelectorAll("#contact form *");
+const submitBnt = document.querySelector(".submit-btn");
+const nameInput = document.querySelector("#name");
+const mailInput = document.querySelector("#mail");
+const subjectInput = document.querySelector("#subject");
+const messageInput = document.querySelector("#message");
+let isChecked = false;
 
 // Main Function
 const main = () => {
@@ -73,8 +79,31 @@ const main = () => {
     });
   });
 
+  const checkForm = () => {
+    if (nameInput.value === "" ||nameInput.value === null){
+      return alert("Please enter your name");
+    } else if (mailInput.value === "" ||mailInput.value === null){
+      return alert("Please enter your email");
+    } else if (subjectInput.value === "" || subjectInput.value === null){
+      return alert("Please enter your subject");
+    } else if (messageInput.value === "" || messageInput.value === null){
+      return ("Please enter your message");
+    } else {
+      return isChecked = true;
+    }
+  }
+
+  const sendMail = (e) => {
+    e.preventDefault();
+    checkForm();
+    if (isChecked){
+      window.open(`mailto:aljaz.berglez@gmail.com?subject=${subjectInput.value}&body=${messageInput.value}`);
+    }
+  }
+
   // Caliing functions
   animations();
+  submitBnt.addEventListener("click", sendMail);
 }
 
 
