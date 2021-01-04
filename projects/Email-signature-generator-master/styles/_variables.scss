@@ -1,0 +1,42 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexBox($direction, $justifyContent) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+/* background Colors */
+$headerColor: #007c34;
+$backgroundColor: rgb(235, 235, 235);
+
+/* Font Colors */
+$primaryFont: #595959;
+
+/* Animations */
+@keyframes instructionsPop {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes instructionsClose {
+  from {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}

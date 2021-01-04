@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Signature Generator</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" 
+    rel="stylesheet"
+  >
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+    crossorigin="anonymous" 
+  />
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="popup">
+    <nav><button class="close-btn"><i class="fas fa-times"></i></button></nav>
+    <section>
+      <div class="instructions-gmail">
+        <h1>How do I add my new email signature to Gmail?</h1>
+        <p><strong>1.</strong> Log in to your Gmail account, then click the cog in the top right corner.</p>
+        <p><strong>2.</strong> Select Settings from the drop down menu.</p>
+        <p><strong>3.</strong> Scroll down until you reach the email signature editor, then paste your new email signature there</p>
+        <p><strong>4.</strong> Scroll to the bottom of the page and click 'save changes’.</p>
+      </div>
+      <div class="instructions-outlook">
+        <h1>How do I add my new email signature to Outlook?</h1>
+        <p><strong>1.</strong> Log in to your Outlook account and select the Home Tab> New Email</p>
+        <p><strong>2.</strong> Click the Message tab</p>
+        <p><strong>3.</strong> In the Include group section, select Signature > Signatures</p>
+        <p><strong>4.</strong> In the Choose Default Signature section, be sure to select the account you would like to associate with the signature from the e-mail account dropdown</p>
+        <p><strong>5.</strong> In the Select Signature to Edit section, click the New button and name your signature</p>
+        <p><strong>6.</strong> In the Edit Signature section, paste in your HubSpot generated signature and select OK</p>
+      </div>
+    </section>
+  </div>
+  <header>
+    <h1>Email Signature Generator</h1>
+  </header>
+  <main>
+    <div class="container-left">
+      <div class="header-text">
+        <p>
+          Please use the form below to create your email signature. 
+          Follow the instructions at the bottom of this page to add 
+          the signature into your email client. The * symbol denotes 
+          a required field.
+        </p>
+      </div>
+      <form action="post">
+        <div class="name">
+          <label for="name">Full Name</label>
+          <section class="input-container">
+            <input type="text" id="name" required>
+          </section>
+        </div>
+        <div class="position">
+          <label for="position">Title/Position</label>
+          <section class="input-container">
+            <input type="text" id="position" required>
+          </section>
+        </div>
+        <div class="country">
+          <label for="country">Country</label>
+          <section class="select-container">
+            <select name="country" id="country" required>
+              <option value="none" disabled selected>--Select--</option>
+              <option value="us">United States</option>
+              <option value="mex">Mexico</option>
+              <option value="china">China</option>
+              <option value="slo">Slovenia</option>
+              <option value="uk">United Kingdom</option>
+              <option value="net">Netherlands</option>
+              <option value="tur">Turkey</option>
+            </select>
+          </section>
+        </div>
+        <div class="email-address">
+          <label for="mail">Email Address</label>
+          <section class="input-container">
+            <input type="text" id="mail" required>
+            <p class="main-mail">@company.com</p>
+          </section>
+        </div>
+        <div class="primary-phone">
+          <label for="primary-device" >Phone</label>
+          <section class="select-container">
+            <select class="device" id="primary-device" required>
+              <option value="phone" selected>Phone</option>
+              <option value="mobile">Mobile</option>
+            </select>
+            <input type="tel" class="phone-number">
+          </section>
+        </div>
+        <div class="secondary-phone">
+          <label for="secondary-device">Mobile</label>
+          <section class="select-container">
+            <select class="device" id="secondary-device">
+              <option value="phone">Phone</option>
+              <option value="mobile" selected>Mobile</option>
+            </select>
+            <input type="tel" class="mobile-number">
+          </section>
+        </div>
+        <div class="logo-choose">
+          <label for="logo">Choose Logo</label>
+          <section class="select-container">
+            <button><img src="img/logo-1.png" alt="logo-1" class="logo-1"></button>
+            <button><img src="img/logo-2.png" alt="logo-2" class="logo-2"></button>
+          </section>
+        </div>
+      </form>
+    </div>
+    <div class="container-right">
+      <div class="sign-preview">
+        <h1>Signature Live Preview:</h1>
+        <div class="sign">
+          <section>
+            <h3 class="first-last">Firstname Lastname</h3>
+            <h4 class="job-pos">Job position</h4>
+          </section>
+          <img src="img/logo-2.png" class="logo-preview" alt="">
+          <p class="user-mail"><a href="#" class="mail-link" target="_blank">firstname.lastname@company.com</a></p>
+          <section class="address-phone">
+            <p class="company-address">
+              30800 Rancho Viejo Road, San Juan Capistrano, CA 92675, USA
+            </p>
+            <a class="primary-number" href="#"></a>
+            <a class="secondary-number"></a>
+          </section> 
+          <p class="website-url">W: <a href="https://www.company.com/" target="_blank">www.company.com</a></p>
+        </div>
+        <div class="create-signature">
+          <button id="create-sign">Copy Signature</button>
+          <button class="instruction"><i class="fab fa-google"></i> Add to Gmail</button>
+          <button class="download">Download Signature</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,214 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #00B4DB;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#0083B0), to(#00B4DB));
+  background: linear-gradient(to right, #0083B0, #00B4DB);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header h1 {
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+  color: whitesmoke;
+}
+
+.search-container {
+  min-height: 90vh;
+}
+
+.search-container .search-bar, .search-container .btn-section {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-container .search-bar input {
+  font-family: 'Quicksand', sans-serif;
+  width: 250px;
+  font-size: 18px;
+  padding: 5px 10px;
+  border: none;
+  outline: none;
+}
+
+.search-container .search-bar button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.search-container .search-bar button:hover i {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.search-container .search-bar button i {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  font-size: 18px;
+  padding: 5px;
+  color: whitesmoke;
+}
+
+.btn-section button {
+  font-size: 18px;
+  padding: 5px 10px;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background: whitesmoke;
+  font-weight: 500;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.btn-section button:hover {
+  color: whitesmoke;
+  background: #00B4DB;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  border: 1px whitesmoke solid;
+}
+
+.main-container {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  width: 100%;
+  min-height: 90vh;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.main-container .weather-days {
+  color: whitesmoke;
+  width: 100%;
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .weather-days .weather-day {
+  background: #8bb9ee;
+  margin: 10px;
+  min-width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .weather-days .weather-day div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-container .weather-days .weather-day div section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* Responsive */
+@media screen and (max-width: 750px) {
+  .weather-day {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .weather-day h3 {
+    font-size: 10px;
+  }
+  .weather-day .during section img {
+    width: 50px;
+  }
+  .weather-day .during section * {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 22px;
+  }
+  .btn-section button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .search-container .search-bar input {
+    width: 200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

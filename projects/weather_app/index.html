@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" 
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Aplikacija za vreme</h1>
+    </header>
+    <div class="search-container">
+        <form>
+            <div class="search-bar">
+                <input type="text" name="city" id="city" placeholder="Vnesite ime mesta">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="btn-section">
+                <button class="location-btn">Moja lokacija</button>
+            </div>
+        </form>
+    </div>
+    <div class="main-container">
+        <div class="weather-days">
+            <div class="weather-day">
+                <h3 class="day-1">Danes</h3>
+                <div class="during">
+                    <section>
+                        <p>Dan</p>
+                        <img src="img/01d.png" alt="" id="img-1">
+                        <p class="degrees-1">10 C</p>
+                    </section>
+                    <section>
+                        <p class="description-1">
+                            Sončno
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="weather-day">
+                <h3 class="day-2">Jutri</h3>
+                <div class="during">
+                    <section>
+                        <img src="img/01d.png" alt="">
+                        <p class="degrees">10 C</p>
+                    </section>
+                    <section>
+                        <p class="description">
+                            Sončno
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="weather-day">
+                <h3 class="day-3">26.1</h3>
+                <div class="during">
+                    <section>
+                        <img src="img/01d.png" alt="">
+                        <p class="degrees">10 C</p>
+                    </section>
+                    <section>
+                        <p class="description">
+                            Sončno
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="weather-day">
+                <h3 class="day-4">27.1</h3>
+                <div class="during">
+                    <section>
+                        <img src="img/01d.png" alt="">
+                        <p class="degrees">10 C</p>
+                    </section>
+                    <section>
+                        <p class="description">
+                            Sončno
+                        </p>
+                    </section>
+                </div>
+            </div>
+
+            <div class="weather-day">
+                <h3 class="day-5">28.1</h3>
+                <div class="during">
+                    <section>
+                        <img src="img/01d.png" alt="">
+                        <p class="degrees">10 C</p>
+                    </section>
+                    <section>
+                        <p class="description">
+                            Sončno
+                        </p>
+                    </section>
+                </div>
+            </div>
+            <div class="btn-section">
+                <button class="return">Nazaj</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script 
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" 
+    integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" 
+    crossorigin="anonymous">
+</script>
+<script src="script.js"></script>
+</html>

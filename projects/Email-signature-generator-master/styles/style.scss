@@ -1,0 +1,299 @@
+/* Import Files */
+@import "_variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Segoe UI, sans-serif;
+  color: $primaryFont;
+  overflow-x: hidden;
+}
+
+.popup {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+  background-color: wheat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  nav {
+    padding: 0 10vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    button {
+      border: none;
+      outline: none;
+      &:hover {
+        i {
+          transform: rotateY(180deg);
+          transition: all 0.5s ease;
+        }
+      }
+      cursor: pointer;
+      background: none;
+      i {
+        font-size: 3rem;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+  section {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: center;
+    align-items: center;
+    grid-gap: 20px;
+    div {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+header {
+  height: 15vh;
+  background-color: $headerColor;
+  @include flexCenter;
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: whitesmoke;
+  }
+}
+
+main {
+  min-height: 85vh;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  grid-template-rows: repeat(1, 1fr);
+  align-items: center;
+}
+
+.container-left {
+  height: 85vh;
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+  .header-text {
+    height: 10vh;
+    @include flexCenter;
+    text-align: center;
+    width: 80%;
+    p {
+      font-size: 14px;
+      color: $primaryFont;
+    }
+  }
+  form {
+    border: 1px rgb(224, 224, 224) solid;
+    border-radius: 1px;
+    padding: 20px;
+    div {
+      display: grid;
+      grid-template-columns: 20% 80%;
+      margin: 20px 0;
+      align-items: center;
+      label {
+        font-weight: 700;
+        &::after {
+          content: "*";
+          margin: 2px;
+        }
+      }
+      input {
+        box-shadow: 5px 5px 5px rgb(224, 224, 224);
+        border: 1px rgb(224, 224, 224) solid;
+        border-radius: 3px;
+      }
+      select {
+        border: 1px solid rgb(224, 224, 224);
+        color: $primaryFont;
+        border-radius: 3px;
+      }
+      .input-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+          width: 70%;
+          font-size: 1.1rem;
+          padding: 5px 10px;
+        }
+        .main-mail {
+          font-size: 1.25rem;
+        }
+      }
+      .select-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        select {
+          font-size: 1.1rem;
+          padding: 5px 10px;
+        }
+        input {
+          font-size: 1.1rem;
+          padding: 5px 10px;
+          margin-left: 10px;
+        }
+      }
+    }
+    .secondary-phone label::after,
+    .logo-choose label::after {
+      content: "";
+    }
+    .logo-choose {
+      section {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        button {
+          cursor: pointer;
+          outline: none;
+          border: 1px rgb(224, 224, 224) solid;
+          background: none;
+          transition: all 0.5s ease;
+          &:hover {
+            transition: all 0.5s ease;
+            box-shadow: 5px 5px 5px rgb(224, 224, 224);
+          }
+        }
+      }
+    }
+  }
+}
+
+.container-right {
+  min-height: 85vh;
+  @include flexCenter;
+  .sign-preview {
+    min-height: 50vh;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: baseline;
+    .sign {
+      padding: 5px 10px;
+      border: 1px rgb(224, 224, 224) solid;
+      section {
+        display: flex;
+        flex-direction: column;
+        margin: 5px 0;
+      }
+      h3,
+      h4,
+      img {
+        margin: 5px 0;
+      }
+    }
+    .create-signature {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 80%;
+      button {
+        padding: 5px 10px;
+        background-color: $headerColor;
+        border: 1px black solid;
+        outline: none;
+        border-radius: 3px;
+        color: whitesmoke;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        &:hover {
+          transition: all 0.3s ease;
+          background-color: $primaryFont;
+        }
+        i {
+          color: #fbbc05;
+        }
+      }
+    }
+  }
+}
+
+img {
+  max-width: 200px;
+  max-height: 60px;
+}
+
+@media screen and (max-width: 1100px) {
+  .container-left {
+    form {
+      div {
+        grid-template-columns: 30% 70%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 995px) {
+  main {
+    @include flexBox(column, space-evenly);
+  }
+}
+
+@media only screen and (max-width: 555px) {
+  form input {
+    width: 170px;
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  header {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+
+  .container-left {
+    .header-text {
+      width: 100%;
+      p {
+        font-size: 0.8rem;
+      }
+    }
+    form {
+      div {
+        label {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  .container-left form div .input-container .main-mail {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container-left {
+    form {
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .input-container {
+          input {
+            margin: 3px;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+}

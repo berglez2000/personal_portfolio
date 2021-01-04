@@ -28,7 +28,7 @@ const main = () => {
     // home animation
     if (window.innerWidth > 750){
       gsap.from(homeText, {duration: 1.5, stagger: 0.15, y: 50, opacity: 0, ease: "power4.out"});
-      gsap.from(homeImg, {duration: 1.5, y: 50, opacity: 0});
+      gsap.from(homeImg, {duration: 2, y: 50, opacity: 0});
     } else{
       tl.from(homeImg, {duration: 3, y: 50, opacity: 0.5});
       tl.to(homeImg, {duration: 0, y: 1000, display: "none"});
