@@ -1,0 +1,138 @@
+#projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0 10vh;
+  background-image: url(../img/abstract-background.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Quicksand", sans-serif;
+  .titles {
+    height: 10vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    * {
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .small-title {
+      color: grey;
+      font-size: 12px;
+    }
+    .title {
+      font-family: "Playfair Display", sans-serif;
+    }
+  }
+  .container {
+    min-height: fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    grid-template-rows: repeat(2, 250px);
+    grid-gap: 25px;
+    width: 100%;
+    .project {
+      width: 250px;
+      height: 250px;
+      border-radius: 5px;
+      position: relative;
+      .fade-in {
+        position: absolute;
+        width: 250px;
+        height: 250px;
+        background-color: blue;
+        color: whitesmoke;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        border-radius: 5px;
+        top: 0;
+        left: 0;
+        transition: all 0.5s ease;
+        h1{
+          font-size: 1.8rem;
+        }
+        a{
+          button{
+            font-size: 18px;
+            padding: 5px 10px;
+            background-color: whitesmoke;
+            color: black;
+            border: 1px black solid;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            &:hover{
+              background-color: lightgrey;
+            }
+          }
+        }
+      }
+      &:hover {
+        .fade-in {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px){
+  #projects{
+    height: fit-content;
+    .container{
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+@media screen and (max-width: 520px){
+  #projects{
+    .container{
+      .project{
+        width: 200px;
+        height: 200px;
+        .fade-in{
+          width: 200px;
+          height: 200px;
+          h1{
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 350px){
+  #projects{
+    .container{
+      .project{
+        width: 150px;
+        height: 150px;
+        .fade-in{
+          width: 150px;
+          height: 150px;
+          h1{
+            font-size: 18px;
+          }
+          a{
+            button{
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

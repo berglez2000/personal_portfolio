@@ -1,0 +1,102 @@
+#about {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  padding: 0 10vh;
+  background-image: url(../img/abstract-background-3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Quicksand", sans-serif;
+  .titles {
+    height: 10vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    flex-direction: column;
+    * {
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .small-title {
+      color: grey;
+      font-size: 12px;
+    }
+    .title {
+      font-family: "Playfair Display", sans-serif;
+    }
+  }
+  .skills {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .skill {
+      height: 150px;
+      width: 150px;
+      margin: 0 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 20px;
+      text-align: center;
+      background: whitesmoke;
+      box-shadow: 5px 5px 5px 5px rgb(207, 207, 207);
+      transition: all 0.5s ease;
+      .line {
+        width: 100%;
+        height: 2px;
+        background: rgb(0, 119, 255);
+      }
+      i {
+        font-size: 2rem;
+      }
+      &:hover {
+        transition: all 0.5s ease;
+        transform: scale(1.075);
+      }
+    }
+  }
+  #code {
+    i {
+      color: rgb(0, 119, 255);
+    }
+  }
+  #university {
+    i {
+      color: gold;
+    }
+    .line {
+      background: gold;
+    }
+  }
+  #athlete {
+    i {
+      color: green;
+    }
+    .line {
+      background: green;
+    }
+  }
+}
+
+@media screen and (max-width: 650px){
+  #about{
+    min-height: 100vh;
+    .text-container{
+      p{
+        font-size: 14px;
+      }
+    }
+    .skills{
+      flex-direction: column;
+      .skill{
+        margin: 20px 0;
+        width: 125px;
+        height: 125px;  
+      }
+    }
+  }
+}
