@@ -49,6 +49,38 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  #home {
+    img {
+      height: 800px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #home {
+    img {
+      height: 700px;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #home {
+    img {
+      height: 650px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #home {
+    img {
+      height: 80%;
+    }
+  }
+}
+
 @media screen and (max-width: 500px) {
   #home {
     img {

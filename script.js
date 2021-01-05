@@ -54,7 +54,7 @@ const main = () => {
     gsap.from(skills, {scrollTrigger: ".skill-section", duration: 1, opacity: 0, x: -50});
     gsap.from(skillPercentege, {scrollTrigger: ".skill-section", duration: 1, width: 0, delay: 0.5});
     gsap.from(addSkills, {scrollTrigger: ".add-skills", duration: 1, x: -70, opacity: 0, stagger: 0.15, delay: 1});
-
+    
     // Projects animation
     gsap.from(projectTitle, {scrollTrigger: "#projects .titles", duration: 1, opacity: 0, x: -50});
     gsap.from(projects, {scrollTrigger: "#projects .container", duration: 1, opacity: 0, stagger: 0.25, delay: 0.5});

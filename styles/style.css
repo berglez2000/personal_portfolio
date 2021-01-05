@@ -331,6 +331,30 @@ nav .copyright {
   max-height: 90%;
 }
 
+@media screen and (max-width: 1300px) {
+  #home img {
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  #home img {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #home img {
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  #home img {
+    height: 80%;
+  }
+}
+
 @media screen and (max-width: 500px) {
   #home img {
     height: 500px;
@@ -595,6 +619,7 @@ nav .copyright {
 }
 
 #skills .skill-section #html .percentege {
+  min-width: 80%;
   width: 85%;
   background: #f16529;
 }
