@@ -28,119 +28,15 @@
     }
   }
   .container {
-    min-height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(2, 250px);
-    grid-template-rows: repeat(2, 250px);
-    grid-gap: 25px;
     width: 100%;
-    .project {
-      width: 250px;
-      height: 250px;
-      border: 1px black solid;
-      border-radius: 3px;
-      background: linear-gradient(to right, lightblue, rgb(164, 207, 221));
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-evenly;
-      text-align: center;
-      position: relative;
-      button {
-        font-family: "Quicksand", sans-serif;
-        font-size: 18px;
-        padding: 5px;
-        border-radius: 3px;
-        border: 1px black solid;
-        outline: none;
-        cursor: pointer;
-      }
-      .fade-in {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 250px;
-        height: 250px;
-        opacity: 0;
-        z-index: -1;
-        transition: all 0.5s ease;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
-      h1 {
-        font-size: 1.6rem;
-        z-index: 2;
-      }
-      a {
-        z-index: 2;
-      }
-      &:hover {
-        .fade-in {
-          opacity: 1;
-          z-index: 1;
-          transition: opacity 0.5s;
-        }
-        #email-gen {
-          background-image: url(../img/email-signature-img.png);
-        }
-        #weather-app {
-          background-image: url(../img/weather-app-img.png);
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 680px) {
-  #projects {
-    height: fit-content;
-    .container {
-      padding: 20px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-  }
-}
-
-@media screen and (max-width: 520px) {
-  #projects {
-    .container {
-      .project {
-        width: 200px;
-        height: 200px;
-        .fade-in {
-          width: 200px;
-          height: 200px;
-          h1 {
-            font-size: 1.5rem;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 350px) {
-  #projects {
-    .container {
-      .project {
-        width: 150px;
-        height: 150px;
-        .fade-in {
-          width: 150px;
-          height: 150px;
-          h1 {
-            font-size: 18px;
-          }
-          a {
-            button {
-              font-size: 12px;
-            }
-          }
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .row {
+      .card {
+        margin: 10px;
+        box-shadow: rgb(226, 226, 226) 5px 5px 5px;
+        max-width: 80%;
       }
     }
   }

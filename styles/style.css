@@ -733,145 +733,23 @@ nav .copyright {
 }
 
 #projects .container {
-  min-height: -webkit-fit-content;
-  min-height: -moz-fit-content;
-  min-height: fit-content;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (250px)[2];
-      grid-template-columns: repeat(2, 250px);
-  -ms-grid-rows: (250px)[2];
-      grid-template-rows: repeat(2, 250px);
-  grid-gap: 25px;
   width: 100%;
-}
-
-#projects .container .project {
-  width: 250px;
-  height: 250px;
-  border: 1px black solid;
-  border-radius: 3px;
-  background: -webkit-gradient(linear, left top, right top, from(lightblue), to(#a4cfdd));
-  background: linear-gradient(to right, lightblue, #a4cfdd);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  text-align: center;
-  position: relative;
 }
 
-#projects .container .project button {
-  font-family: "Quicksand", sans-serif;
-  font-size: 18px;
-  padding: 5px;
-  border-radius: 3px;
-  border: 1px black solid;
-  outline: none;
-  cursor: pointer;
-}
-
-#projects .container .project .fade-in {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 250px;
-  height: 250px;
-  opacity: 0;
-  z-index: -1;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-#projects .container .project h1 {
-  font-size: 1.6rem;
-  z-index: 2;
-}
-
-#projects .container .project a {
-  z-index: 2;
-}
-
-#projects .container .project:hover .fade-in {
-  opacity: 1;
-  z-index: 1;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
-#projects .container .project:hover #email-gen {
-  background-image: url(../img/email-signature-img.png);
-}
-
-#projects .container .project:hover #weather-app {
-  background-image: url(../img/weather-app-img.png);
-}
-
-@media screen and (max-width: 680px) {
-  #projects {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-  #projects .container {
-    padding: 20px 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-@media screen and (max-width: 520px) {
-  #projects .container .project {
-    width: 200px;
-    height: 200px;
-  }
-  #projects .container .project .fade-in {
-    width: 200px;
-    height: 200px;
-  }
-  #projects .container .project .fade-in h1 {
-    font-size: 1.5rem;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  #projects .container .project {
-    width: 150px;
-    height: 150px;
-  }
-  #projects .container .project .fade-in {
-    width: 150px;
-    height: 150px;
-  }
-  #projects .container .project .fade-in h1 {
-    font-size: 18px;
-  }
-  #projects .container .project .fade-in a button {
-    font-size: 12px;
-  }
+#projects .container .row .card {
+  margin: 10px;
+  -webkit-box-shadow: #e2e2e2 5px 5px 5px;
+          box-shadow: #e2e2e2 5px 5px 5px;
+  max-width: 80%;
 }
 
 #contact {

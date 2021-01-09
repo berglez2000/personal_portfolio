@@ -101,6 +101,7 @@ const main = () => {
     }
   }
 
+
   // Caliing functions
   animations();
   submitBnt.addEventListener("click", sendMail);

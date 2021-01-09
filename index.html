@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aljaž Berglez</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link 
     rel="stylesheet" 
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" 
@@ -150,33 +151,56 @@
       </div>
 
       <div class="container">
-        <div class="project">
-          <h1 class="title">Email Signature Generator</h1>
-          <a href="projects/Email-signature-generator-master/index.html" target="_blank"><button>Open</button></a>
-          <div class="fade-in" id="email-gen">
+        <div class="row">
+          <div class="card">
+            <div class="card" style="width: 18rem;">
+              <img src="img/weather-app-img.png" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Vremenska napoved</h5>
+                <p class="card-text">
+                  Aplikacija vam preko API klicev pokaže vremensko napoved za naslednjih 5 dni. 
+                  Vanjo lahko vpišete poljubno mesto ali pa kliknete na gumb "Moja lokacija".
+                </p>
+                <a href="projects/weather_app/index.html" target="_blank" class="btn btn-primary">Odpri</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="project">
-          <h1 class="title">Vremenska napoved</h1>
-          <a href="projects/weather_app/index.html" target="_blank"><button>Open</button></a>
-          <div class="fade-in" id="weather-app">
+          <div class="card">
+            <div class="card" style="width: 18rem;">
+              <img src="img/email-signature-img.png" class="card-img-top">
+              <div class="card-body">
+                <h5 class="card-title">Gmail Signature Generator</h5>
+                <p class="card-text">
+                  Z to aplikacijo lahko zgenerirate svoj podpis, ki ga lahko uporabljate za vaš Email ali Outlook.
+                </p>
+                <a href="projects/Email-signature-generator-master/index.html" target="_blank" class="btn btn-primary">Odpri</a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="project">
-          <h1 class="title">Startup Company website</h1>
-          <h4>V izdelavi :(</h4>
-          <a href="#"><button>Open</button></a>
-          <div class="fade-in">
+          <div class="card" style="width: 18rem;">
+            <img src="img/ao-design.png" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title">Startup Company Website</h5>
+              <p class="card-text">
+                Pri tem projektu sem svoji punci naredil spletno stran od začetka 
+                na kateri lahko predstavi svoje izdelke in ponudbe.
+              </p>
+              <a href="#" target="_blank" class="btn btn-primary">Odpri</a>
+            </div>
           </div>
-        </div>
-        <div class="project">
-          <h1 class="title">Tic Tac Toe</h1>
-          <h4>V izdelavi :(</h4>
-          <a href="#"><button>Open</button></a>
-          <div class="fade-in">
+          <div class="card" style="width: 18rem;">
+            <img src="img/tic-tac-toe.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Tic Tac Toe</h5>
+              <p class="card-text">
+                V temu projektu sem naredil igrico Tic Tac Toe, ki je namenjana za 2 osebi. Trenutno pa delam, da lahko igraš tudi proti pametnemu računalniku.
+              </p>
+              <a href="projects/TicTacToe/index.html" target="_blank" class="btn btn-primary">Odpri</a>
+            </div>
           </div>
         </div>
       </div>
+
     </div>
 
     <div id="contact">
@@ -210,6 +234,8 @@
     </div>
   </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
 <script src="script.js"></script>
