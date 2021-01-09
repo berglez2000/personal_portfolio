@@ -746,10 +746,20 @@ nav .copyright {
 }
 
 #projects .container .row .card {
+  width: 18rem;
   margin: 10px;
   -webkit-box-shadow: #e2e2e2 5px 5px 5px;
           box-shadow: #e2e2e2 5px 5px 5px;
   max-width: 80%;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+#projects .container .row .card:hover {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transform: scale(1.025);
+          transform: scale(1.025);
 }
 
 #contact {
