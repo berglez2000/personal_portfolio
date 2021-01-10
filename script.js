@@ -116,6 +116,3 @@ const main = () => {
 
 // Event listeners
 window.addEventListener("load", main);
-window.addEventListener("resize", () => {
-  this.location.reload(false);
-});
