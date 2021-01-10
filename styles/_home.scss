@@ -29,16 +29,8 @@
       padding-left: 10%;
     }
     button {
-      padding: 5px 10px;
-      border-radius: 5px;
-      border: none;
-      cursor: pointer;
-      border: 1px black solid;
-      transition: all 0.3s ease;
-      &:hover {
-        background: rgb(224, 224, 224);
-        transition: all 0.3s ease;
-      }
+      font-family: "Quicksand", sans-serif;
+      text-transform: uppercase;
     }
   }
   img {

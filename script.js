@@ -13,7 +13,7 @@ const skills = document.querySelectorAll("#skills .skill");
 const addSkills = document.querySelectorAll("#skills .add-skills *");
 const skillPercentege = document.querySelectorAll("#skills .percentege");
 const projectTitle = document.querySelector("#projects .titles")
-const projects = document.querySelectorAll("#projects .project");
+const projects = document.querySelectorAll("#projects .card");
 const contactTitle = document.querySelector("#contact .titles");
 const contacts = document.querySelectorAll("#contact .container div");
 const contactform = document.querySelectorAll("#contact form *");
@@ -23,9 +23,18 @@ const mailInput = document.querySelector("#mail");
 const subjectInput = document.querySelector("#subject");
 const messageInput = document.querySelector("#message");
 let isChecked = false;
+let loaded = false;
+
 
 // Main Function
 const main = () => {
+  // Loaded is true
+  loaded = true;
+  if (loaded){
+    const loader = document.querySelector(".loader");
+    loader.classList.add("hide");
+  }
+
   // Animations
   gsap.registerPlugin(ScrollTrigger);
   const animations = () => {
@@ -53,7 +62,7 @@ const main = () => {
     gsap.from(skillTitle, {scrollTrigger: "#skills", duration: 1, x: -30, opacity: 0});
     gsap.from(skills, {scrollTrigger: ".skill-section", duration: 1, opacity: 0, x: -50});
     gsap.from(skillPercentege, {scrollTrigger: ".skill-section", duration: 1, width: 0, delay: 0.5});
-    gsap.from(addSkills, {scrollTrigger: ".add-skills", duration: 1, x: -70, opacity: 0, stagger: 0.15, delay: 1});
+    gsap.from(addSkills, {scrollTrigger: ".add-skills", duration: 1, x: -70, opacity: 0, stagger: 0.15});
     
     // Projects animation
     gsap.from(projectTitle, {scrollTrigger: "#projects .titles", duration: 1, opacity: 0, x: -50});
@@ -64,7 +73,6 @@ const main = () => {
     gsap.from(contacts, {scrollTrigger: "#contact .container", duration: 1, opacity: 0, x: -50, stagger: 0.25, delay: 0.5});
     gsap.from(contactform, {scrollTrigger: "#contact form", duration: 1, opacity: 0, x: 50, stagger: 0.25, delay: 0.5});
   }
-
 
   // Animate burger 
   burger.addEventListener("click", () => {
@@ -82,8 +90,6 @@ const main = () => {
   const checkForm = () => {
     if (nameInput.value === "" ||nameInput.value === null){
       return alert("Please enter your name");
-    } else if (mailInput.value === "" ||mailInput.value === null){
-      return alert("Please enter your email");
     } else if (subjectInput.value === "" || subjectInput.value === null){
       return alert("Please enter your subject");
     } else if (messageInput.value === "" || messageInput.value === null){
@@ -110,3 +116,6 @@ const main = () => {
 
 // Event listeners
 window.addEventListener("load", main);
+window.addEventListener("resize", () => {
+  this.location.reload(false);
+});

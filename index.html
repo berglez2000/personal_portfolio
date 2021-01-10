@@ -17,6 +17,11 @@
   <link rel="stylesheet" href="styles/style.css" type="text/css">
 </head>
 <body>
+  <div class="loader">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
   <nav>
     <div class="short-about">
       <img src="img/rounded-small-img.jpg" alt="profile-pic" id="small-profile-img">
@@ -58,7 +63,7 @@
           <span>Dobrodošli</span> <span>na moji</span> <span>spletni strani</span>
         </h2>
         <h3>Moje ime je Aljaž</h3>
-        <a href="CV/Aljaž Berglez CV.pdf" download><button>Download CV</button></a>
+        <a href="CV/Aljaž Berglez CV.pdf"download><button class="btn btn-outline-dark">Download CV</button></a>
       </div>
       <img src="img/spletna-stran-jaz.png" alt="">
     </div>
@@ -100,42 +105,38 @@
         <h6 class="small-title">MY SPECIALTY</h6>
         <h1 class="title">Znanja in izkušnje</h1>
       </div>
-      <div class="text-container">
-        <p>
-          Spodaj so navedena moja dosedanja znanja. <!--Kristina-->
-        </p>
-      </div>
       <div class="skill-section">
         <div class="skill" id="html">
           <h3 class="skill-name">HTML5</h3>
           <div class="bar">
-            <div class="percentege"></div>
+            <div class="percentege">85%</div>
           </div>
         </div>
         <div class="skill" id="css">
           <h3 class="skill-name">CSS3</h3>
           <div class="bar">
-            <div class="percentege"></div>
+            <div class="percentege">80%</div>
           </div>
         </div>
         <div class="skill" id="js">
           <h3 class="skill-name">JavaScript</h3>
           <div class="bar">
-            <div class="percentege"></div>
+            <div class="percentege">70%</div>
           </div>
         </div>
         <div class="skill" id="python">
           <h3 class="skill-name">Python</h3>
           <div class="bar">
-            <div class="percentege"></div>
+            <div class="percentege">60%</div>
           </div>
         </div>
       </div>
       <div class="add-skills">
         <h1 class="title">Dodatna znanja:</h1>
         <div class="container">
-          <li>Delo z računalniki, poznavanje Windows, Linux, delo z internetom,</li>
+          <li>Delo z računalniki, poznavanje Windows, Linux, delo z internetom, virtualizacija, strežniško okolje, protokoli,</li>
           <li>Dobro poznavanje CSS frameworkov (Sass, Bootstrap, GSAP),</li>
+          <li>Osnovno poznavanje Git in Github,</li>
           <li>Aktivno znanje angleškega jezika,</li>
           <li>Vozniški izpit kategorije B,</li>
           <li>Poznavanje CNC strojev,</li>
@@ -221,7 +222,6 @@
         </div>
         <form class="form">
           <input type="text" name="name" id="name" placeholder="Name" required>
-          <input type="email" name="mail" id="mail" placeholder="Email" required>
           <input type="text" name="subject" id="subject" placeholder="Subject" required>
           <textarea name="message" id="message" cols="30" rows="5" placeholder="Message" required></textarea>
           <button class="submit-btn" type="submit">Send Message</button>

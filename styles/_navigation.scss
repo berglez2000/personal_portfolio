@@ -32,6 +32,8 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
     li {
       list-style: none;
       a {
@@ -137,36 +139,36 @@ nav {
   }
 }
 
-@media screen and (max-width: 325px){
-  nav{
-    .short-about{
-      img{
+@media screen and (max-width: 325px) {
+  nav {
+    .short-about {
+      img {
         width: 125px;
         height: 125px;
       }
-      h3{
+      h3 {
         font-size: 1.25rem;
       }
-      h4{
+      h4 {
         font-size: 14px;
       }
     }
-    .links{
-      li{
-        a{
+    .links {
+      li {
+        a {
           font-size: 14px;
         }
       }
     }
-    .contacts{
-      div{
-        i{
+    .contacts {
+      div {
+        i {
           font-size: 1.25rem;
         }
       }
     }
-    .copyright{
-      p{
+    .copyright {
+      p {
         font-size: 10px;
       }
     }
