@@ -46,7 +46,7 @@ main .burger div {
 
 /* Spinner */
 .loader {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -874,9 +874,7 @@ nav .copyright {
 }
 
 #contact .container .info div i {
-  width: 100px;
-  height: 100px;
-  background: whitesmoke;
+  background: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -993,7 +991,8 @@ nav .copyright {
   #contact .container .info div a {
     font-size: 14px;
   }
-  #contact .container form input, #contact .container form textarea {
+  #contact .container form input,
+  #contact .container form textarea {
     width: 250px;
   }
 }
@@ -1007,7 +1006,8 @@ nav .copyright {
   #contact .container .info div a {
     font-size: 12px;
   }
-  #contact .container form input, #contact .container form textarea {
+  #contact .container form input,
+  #contact .container form textarea {
     width: 200px;
   }
 }
