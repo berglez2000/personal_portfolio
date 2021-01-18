@@ -29,9 +29,6 @@
   }
   .container {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     .row {
       .card {
         width: 18rem;
@@ -39,6 +36,7 @@
         box-shadow: rgb(226, 226, 226) 5px 5px 5px;
         max-width: 80%;
         transition: all 0.5s ease;
+        min-height: fit-content;
         &:hover {
           transition: all 0.5s ease;
           transform: scale(1.025);
